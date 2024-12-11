@@ -20,7 +20,7 @@ while True:
 
 #Loops as long as user wants to send messages
 while True:
-    
+    #Loops until user enters valid query
     while True:
         mess = str(input("Enter the message to be sent: "))
         if mess in ["What is the average moisture inside my kitchen fridge in the past three hours?", "What is the average water consumption per cycle in my smart dishwasher?", "Which device consumed more electricity among my three IoT devices?"]:
