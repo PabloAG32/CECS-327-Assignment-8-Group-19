@@ -58,7 +58,7 @@ with conn:
             for x in list:
                 sum += float(x["payload"]["Moisture Meter - Fridge Moisture"])
                 count += 1
-            avg = (sum/40)/count
+            avg = ((sum/count)/40) * 100
             #Convert time from UTC to PST
             time = now.astimezone(datetime.timezone(-datetime.timedelta(hours = 8)))
             output = "As of " + str(time) + ", the average moisture in the kitchen fridge in the past three hours is " + str(avg) + " RH %"
