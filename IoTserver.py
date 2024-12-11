@@ -94,14 +94,14 @@ with conn:
             e3 = amp3 * voltage
             if (e1 >= e2 and e1 >= e3):
                 most = "Smart Fridge 1"
-                watts = e1
+                watts = e1/1000
             elif e2 >= e3:
                 most = "Smart Dishwasher"
-                watts = e2
+                watts = e2/1000
             else:
                 most = "Smart Fridge 2"
-                watts = e3
-            output = "The device that has consumed the most electricity is " + most + ", which consumed " + str(watts) + " Watts."
+                watts = e3/1000
+            output = "The device that has consumed the most electricity is " + most + ", which consumed " + str(watts) + " kW."
         else:
             output = "Invalid query."
         #Sends message back to client
